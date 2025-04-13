@@ -8,7 +8,7 @@ json_data_list = read_jsonl('database/json_data/0413crush.jsonl')
 for json_data in json_data_list:
     query = json_data['query']
     query_data[query].append(json_data)
-chroma_client = chromadb.PersistentClient(path = '高情商机器人\database')
+chroma_client = chromadb.PersistentClient(path ='/workspace/高情商机器人/database')
 
 collection = chroma_client.get_or_create_collection(name="chat_bot")
 for  idx, (query, json_data) in enumerate(query_data.items()):
