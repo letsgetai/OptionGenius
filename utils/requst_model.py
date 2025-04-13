@@ -19,7 +19,7 @@ def get_embedding(text):
 def chat_with_model(prompt):
     completion = client.chat.completions.create(
         # 指定您创建的方舟推理接入点 ID，此处已帮您修改为您的推理接入点 ID
-        model="doubao-1-5-pro-32k-250115",
+        model="deepseek-v3-250324",
         messages=[
             {"role": "system", "content": "你是一个高情商的人工智能助手"},
             {"role": "user", "content": prompt},
